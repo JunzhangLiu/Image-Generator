@@ -96,15 +96,9 @@ class GUI(QMainWindow):
             self.noise[0,0,0,idx]=self.main_sliders[idx].value()/self.precision
             self.set_pix_map()
         
-# restart = 0
-
-# if restart:
-#     from pca import set_data
-#     set_data()
 app = qa(sys.argv)
 model = Model(2)
 ckpt = tf.train.Checkpoint(model)
-# path = os.path.join(os.path.dirname(__file__),"saved_model/save_mode/model")
 path = os.path.join(os.path.dirname(__file__),"saved_model/166/")
 ckpt.read(path)#.assert_consumed()
 

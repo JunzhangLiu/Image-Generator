@@ -60,7 +60,6 @@ class Model(keras.Model):
         return self.generator(inputs,training=False)
 
     def train_step(self,data):
-        # BCE = keras.losses.BinaryCrossentropy()
         x_real = tf.cast(data,tf.float32)
         x_real-=127.5
         x_real/=128

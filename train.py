@@ -9,18 +9,14 @@ NOISE_DIM = 100
 load = 69
 data = np.load("./anime_face/data_set.npy").astype(np.uint8)
 data = data[:data.shape[0]//BATCH_SIZE*BATCH_SIZE]
-# data-=127.5
-# data/=128
 model = Model(BATCH_SIZE,NOISE_DIM)
-# i = model.generate(np.zeros((1,128)))
-# print(i.shape)
 model.compile()
 ckpt = tf.train.Checkpoint(model)
 if load:
     ckpt.read(os.path.join(os.path.dirname(__file__),f"saved_model/{load:d}/"))
     model.discriminator_opt = keras.optimizers.Adam(learning_rate=1e-5,beta_1=0.)
     model.generator_opt = keras.optimizers.Adam(learning_rate=1e-5,beta_1=0.)
-for i in range(70,200):
+for i in range(0,200):
     np.random.shuffle(data)
     model.fit(data,batch_size=BATCH_SIZE,epochs=1,shuffle=True)
     print(i)

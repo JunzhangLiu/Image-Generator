@@ -19,9 +19,6 @@ for root,_,files in os.walk("./anime_face/images/"):
             i+=1
         except Exception as e:
             print("failed to load file "+f,e)
-        # if i == 50:
-        #     break
 print(len(data_set))
 data_set = np.array(data_set).astype(np.uint8)
-# mean = data_set.mean()
 np.save("anime_face/data_set",data_set)
