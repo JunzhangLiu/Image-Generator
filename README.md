@@ -1,12 +1,12 @@
 # GAN-Image-Generator
 GUI Feature:<br/>
-The generator takes a vector of size 100 as input to produce an output image of size 128*128. The 100 sliders corresponds to the 100 valuse.<br/>
+The generator takes a vector of size 100 as input to produce an output image of size 128\*128. The 100 sliders corresponds to the 100 values.<br/>
 <img src="./demo/a.gif"><br/>
 <br/>
 The "random" button once clicked will randomize all the sliders to produce a random image.</br>
 <img src="./demo/b.gif"><br/>
 <br/>
-This repository uses WGAN to generate 128*128 images. I use it to generate anime faces, but it can be used to generate any image if trained using proper datasets.<br/>
+This repository uses WGAN to generate 128\*128 images. I use it to generate anime faces, but it can be used to generate any image if trained using proper datasets.<br/>
 I used the dataset on https://www.kaggle.com/splcher/animefacedataset and wrote delete_duplicate.py to delete duplicated images found in the dataset.<br/>
 Images after 1 epoch:<br/>
 ![0_0](/sample_image/0_0.jpg?raw=true)
