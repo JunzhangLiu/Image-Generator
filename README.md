@@ -1,4 +1,4 @@
-# GAN-Image-Generator
+# Image-Generator
 GUI Feature:<br/>
 The generator takes a vector of size 100 as input to produce an output image of size 128\*128. The 100 sliders corresponds to the 100 values.<br/>
 <img src="./demo/a.gif"><br/>
